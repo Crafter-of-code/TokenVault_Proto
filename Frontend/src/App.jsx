@@ -1,12 +1,28 @@
 import React from "react";
-import "./App.css";
-
+import { NavLink, Outlet } from "react-router-dom";
+import styles from "./styles/App.module.css";
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
     <React.Fragment>
-      <h1>project has been initialized</h1>
+      <header>
+        <NavLink
+          to="/signin"
+          className={({ isActive }) =>
+            isActive ? styles.isActivecolor : styles.notActivecolor
+          }
+        >
+          Signin
+        </NavLink>
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            isActive ? styles.isActivecolor : styles.notActivecolor
+          }
+        >
+          Login
+        </NavLink>
+      </header>
+      <Outlet />
     </React.Fragment>
   );
 }

@@ -1,0 +1,51 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+.first_aside {
+  /* border: 2px solid red; */
+  background-color: black;
+  height: 93vh;
+  width: 50%;
+}
+.second_aside {
+  border: 2px solid white;
+  /* background-color: black; */
+  height: 93vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.second_aside form {
+  width: fit-content;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.second_aside form input {
+  min-height: 40px;
+  max-height: 63px;
+  /* min-width: 300px;
+  max-width: 635px; */
+  width: clamp(300px, 25vw, 635px);
+  padding: 1em 2em;
+}
+.second_aside form button {
+  min-height: 40px;
+  max-height: 63px;
+  max-width: 635px;
+  width: 50%;
+}
+@media screen and (max-width: 900px) {
+  .first_aside {
+    display: none;
+  }
+  .second_aside {
+    width: 100%;
+  }
+}
