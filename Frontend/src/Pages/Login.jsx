@@ -10,8 +10,9 @@ export default function Login() {
       username: user_name.current.value,
       userpassword: user_pass.current.value,
     };
+    console.log(data);
     axios
-      .post("http://localhost:8080/login", data)
+      .post("http://localhost:8080/login", data, { withCredentials: true })
       .then((res) => console.log(res.data))
       .catch((error) => console.log(error));
   }
